@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: chocolate;
+}
+
+.photo {
+  width: 400px;
+  height: 550px;
+  margin: 50px auto;
+  position: relative;
+}
+.photo > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.photo > div {
+  display: flex;
+  position: absolute;
+  transition: 3s;
+}
+.photo > div:nth-of-type(1) {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  width: 0;
+  height: 90%;
+  top: 5%;
+  left: 50%;
+  opacity: 0;
+}
+.photo > div:nth-of-type(2) {
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  width: 90%;
+  height: 0;
+  left: 5%;
+  top: 50%;
+  opacity: 0;
+}
+.photo:hover > div:nth-of-type(1) {
+  width: 90%;
+  left: 5%;
+  opacity: 1;
+}
+.photo:hover > div:nth-of-type(2) {
+  height: 90%;
+  top: 5%;
+  opacity: 1;
+}
+.photo > figcaption {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  opacity: 0;
+  transition: 3s;
+  text-transform: capitalize;
+}
+.photo:hover > figcaption {
+  opacity: 1;
+}/*# sourceMappingURL=master5.css.map */
